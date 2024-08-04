@@ -1,139 +1,52 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>About Us - Grocery Store</title>
-</head>
-
-<body class="bg-gray-100">
-    <header class="bg-green-600 text-white p-6">
-        <div class="container mx-auto flex justify-between items-center">
-            <img src="images/logo.png" alt="Logo" class="w-20">
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="index.html" class="hover:underline">Home</a></li>
-                    <li><a href="about.html" class="hover:underline">About</a></li>
-                    <li><a href="contact.html" class="hover:underline">Contact</a></li>
-                    <li><a href="feature.html" class="hover:underline">Feature</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container mx-auto py-12 px-6">
-        <section class="text-center mb-12">
-            <h1 class="text-4xl font-bold mb-4">About Us</h1>
-            <p class="text-gray-700 leading-relaxed">Welcome to our Grocery Store! We are committed to providing you with the freshest and highest quality products.</p>
-        </section>
-
-        <section class="bg-white p-6 rounded-lg shadow-lg mb-12">
-            <h2 class="text-3xl font-semibold mb-4">Our Mission</h2>
-            <p class="text-gray-700 leading-relaxed">Our mission is to make grocery shopping easy and convenient for you. We aim to offer a wide range of products, from fresh produce to household essentials, all at competitive prices.</p>
-        </section>
-
-        <section>
-            <h2 class="text-3xl font-semibold mb-8 text-center">Meet Our Team</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <img src="images/testimonial-3.png" alt="Team Member 1" class="w-32 h-32 rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-semibold">John Doe</h3>
-                    <p class="text-gray-700">Founder & CEO</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <img src="images/testimonial-2.png" alt="Team Member 2" class="w-32 h-32 rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-semibold">Amelia</h3>
-                    <p class="text-gray-700">Operations Manager</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <img src="images/testimonial-1.png" alt="Team Member 3" class="w-32 h-32 rounded-full mx-auto mb-4">
-                    <h3 class="text-xl font-semibold">Mike Johnson</h3>
-                    <p class="text-gray-700">Head of Sales</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-black text-white p-6 text-center">
-        <p>&copy; 2024 Grocery Store. All rights reserved.</p>
-    </footer>
-</body>
-
-</html> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>About Us - Grocery Store</title>
 </head>
 
 <body>
-    <div class="min-h-screen relative bg-[url('images/image.png')] bg-cover px-28 py-5">
-        <nav class="flex items-center">
-            <img src="images/logo.png" alt="" class="w-40 cursor-pointer">
-            <ul class="flex-1 text-center">
+    <div class="min-h-screen relative bg-[url('images/image.png')] bg-cover px-4 md:px-28 py-5">
+        <nav class="fixed left-0  w-full flex items-center justify-between  z-50">
+            <img src="images/logo.png" alt="Logo" class="w-40 cursor-pointer">
+            <ul class="hidden md:flex flex-1 text-center">
                 <li class="list-none inline-block px-5"><a class="no-underline text-white px-2" href="index.html">Home</a></li>
-                <li class="list-none inline-block px-5"><a class="no-underline text-white px-2" href="about.html">About</a></li>
+                <li class="list-none inline-block px-5"><a class="no-underline text-white px-2" href="Aboutus.html">About</a></li>
                 <li class="list-none inline-block px-5"><a class="no-underline text-white px-2" href="contact.html">Contact</a></li>
                 <li class="list-none inline-block px-5"><a class="no-underline text-white px-2" href="feature.html">Feature</a></li>
             </ul>
-            <img src="images/cart.png" alt="" class="w-8 cursor-pointer">
+            <div class="flex items-center">
+                <img src="images/cart.png" alt="Cart" class="w-8 cursor-pointer mr-4">
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </nav>
-
+        <ul id="mobile-menu" class="md:hidden mt-16  space-y-5 hidden">
+            <li><a class="no-underline text-white px-2" href="index.html">Home</a></li>
+            <li><a class="no-underline text-white px-2" href="Aboutus.html">About</a></li>
+            <li><a class="no-underline text-white px-2" href="contact.html">Contact</a></li>
+            <li><a class="no-underline text-white px-2" href="feature.html">Feature</a></li>
+        </ul>
         <main class="text-center mt-32">
             <section class="text-center mb-12">
                 <h1 class="text-4xl font-bold mb-4 text-white">About Us</h1>
                 <p class="text-2xl text-white">Welcome to our Grocery Store! We are committed to providing you with the freshest and highest quality products.</p>
             </section>
-
             <section class="bg-white p-6 rounded-lg shadow-lg mb-12 mx-auto max-w-4xl">
                 <h2 class="text-3xl font-semibold mb-4">Our Mission</h2>
                 <p class="text-gray-700 leading-relaxed">Our mission is to make grocery shopping easy and convenient for you. We aim to offer a wide range of products, from fresh produce to household essentials, all at competitive prices.</p>
             </section>
-
             <section>
                 <h2 class="text-3xl font-semibold mb-8 text-center text-white">Meet Our Team</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -144,22 +57,25 @@
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-lg text-center">
                         <img src="images/testimonial-2.png" alt="Team Member 2" class="w-32 h-32 rounded-full mx-auto mb-4">
-                        <h3 class="text-xl font-semibold">Amelia</h3>
-                        <p class="text-gray-700">Operations Manager</p>
+                        <h3 class="text-xl font-semibold">Jane Smith</h3>
+                        <p class="text-gray-700">Chief Marketing Officer</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-lg text-center">
                         <img src="images/testimonial-1.png" alt="Team Member 3" class="w-32 h-32 rounded-full mx-auto mb-4">
-                        <h3 class="text-xl font-semibold">Mike Johnson</h3>
-                        <p class="text-gray-700">Head of Sales</p>
+                        <h3 class="text-xl font-semibold">Alice Johnson</h3>
+                        <p class="text-gray-700">Head of Operations</p>
                     </div>
                 </div>
             </section>
         </main>
     </div>
 
-    <footer class="bg-blue-950 text-white p-6 text-center">
-        <p>&copy; 2024 Grocery Store. All rights reserved.</p>
-    </footer>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>

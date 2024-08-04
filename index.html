@@ -1,44 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Tailwind</title>
-</head>
-<body>
-    <div class=" min-h-screen relative bg-[url('images/image.png')] bg-cover px-28 py-5">
-        <nav class="flex items-center ">
-            <img src="images/logo.png" alt="" class="w-40 cursor-pointer">
-            <ul class="flex-1 text-center">
-                <li class="list-none inline-block px-5 "><a class="no-underline text-white px-2" href="#">About</a></li>
-                <li class="list-none inline-block px-5 "><a class="no-underline text-white px-2" href="#">Home</a></li>
-                <li class="list-none inline-block px-5 "><a class="no-underline text-white px-2" href="#">Conatct</a></li>
-                <li class="list-none inline-block px-5 "><a class="no-underline text-white px-2" href="#">Feature</a></li>
-            </ul>
-            <img src="images/cart.png" alt="" class="w-8 cursor-pointer">
-        </nav>
-        <div class="text-white mt-32 max-w-lg">
-            <h1 class="text-3xl font-semibold leading-normal">Groceries <br>delivery in <span class="font-extralight">15 mins</span></h1>
-            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus officia qui amet incidunt. Deleniti natus ipsa, cum accusamus explicabo quam!</p>
-
-            <div class="mt-10">
-                <a href="#" class="bg-yellow-300 text-black rounded-3xl py-3 px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">Order Now </a>
-                <a href="#" class="bg-yellow-300 text-black rounded-3xl py-3 px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">Download Now 
-                    <span class="text-lg inline-block rotate-90">&#10148;</span>
-                </a>
-            </div>
-        </div>
-        <img src="images/grocery-image.png" class="w-full xl:w-1 xl:absolute bottom-0 right-20" alt="">
-
-
-    </div>
-</body>
-</html> -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,41 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="output.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Tailwind</title>
+    <title>Grocery Store - Home</title>
 </head>
 
 <body>
-    <div class="min-h-screen relative bg-[url('images/image.png')] bg-cover px-28 py-5">
-        <nav class="flex items-center ">
-            <img src="images/logo.png" alt="" class="w-40 cursor-pointer">
-            <ul class="flex-1 text-center">
-                <li class="list-none inline-block px-5 "><a class="no-underline text-white px-2" href="#">Home</a></li>
-                <li class="list-none inline-block px-5 "><a class="no-underline text-white px-2" href="Aboutus.html">About</a></li>
-                <li class="list-none inline-block px-5 "><a class="no-underline text-white px-2" href="Contact.html">Contact</a></li>
-                <li class="list-none inline-block px-5 "><a class="no-underline text-white px-2" href="Feature.html">Feature</a></li>
+    <div class="min-h-screen relative bg-[url('images/image.png')] bg-cover px-4 md:px-28 py-5">
+        <nav class="fixed w-full left-0 flex items-center justify-between">
+            <img src="images/logo.png" alt="Logo" class="w-40 cursor-pointer">
+            <ul class="hidden md:flex flex-1 text-center">
+                <li class="list-none inline-block px-5"><a class="no-underline text-white px-2" href="index.html">Home</a></li>
+                <li class="list-none inline-block px-5"><a class="no-underline text-white px-2" href="Aboutus.html">About</a></li>
+                <li class="list-none inline-block px-5"><a class="no-underline text-white px-2" href="contact.html">Contact</a></li>
+                <li class="list-none inline-block px-5"><a class="no-underline text-white px-2" href="feature.html">Feature</a></li>
             </ul>
-            <img src="images/cart.png" alt="" class="w-8 cursor-pointer">
-        </nav>
-        <div class="flex items-center mt-32">
-            <div class="text-white max-w-lg flex-1">
-                <h1 class="text-5xl font-semibold leading-normal">Groceries <br>delivery in <span class="font-extralight">15 mins</span></h1>
-                <p class="text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus officia qui amet incidunt. Deleniti natus ipsa, cum accusamus explicabo quam!</p>
-                <div class="mt-10">
-                    <a href="#" class="bg-yellow-300 text-black rounded-3xl py-3 px-8 font-medium inline-block mr-4 hover:bg-transparent hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">Order Now</a>
-                    <a href="#" class=" hover:bg-transparent hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">Download Now
-                        <span class="text-lg inline-block rotate-90">&#10148;</span>
-                    </a>
-
+            <div class="flex items-center">
+                <img src="images/cart.png" alt="Cart" class="w-8 cursor-pointer mr-4">
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <div class="flex-1 flex justify-end">
-                <img src="images/grocery-image.png" class="w-full xl:w-auto" alt="">
+        </nav>
+        <ul id="mobile-menu" class="md:hidden mt-16  space-y-5 hidden">
+            <li><a class="no-underline text-white  px-2" href="#">Home</a></li>
+            <li><a class="no-underline text-white  px-2" href="Aboutus.html">About</a></li>
+            <li><a class="no-underline text-white  px-2" href="Contact.html">Contact</a></li>
+            <li><a class="no-underline text-white  px-2" href="Feature.html">Feature</a></li>
+        </ul>
+        <div class="flex flex-col md:flex-row items-center mt-32">
+            <div class="text-white max-w-lg flex-1 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-semibold leading-normal">Groceries <br>delivery in <span class="font-extralight">15 mins</span></h1>
+                <p class="text-lg md:text-2xl mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus officia qui amet incidunt. Deleniti natus ipsa, cum accusamus explicabo quam!</p>
+                <div class="mt-10 flex flex-col md:flex-row justify-center md:justify-start">
+                    <a href="#" class="bg-yellow-300 text-black rounded-3xl py-3 px-8 font-medium inline-block mr-4 mb-4 md:mb-0 hover:bg-transparent hover:border-yellow-300 hover:text-white duration-300 hover:border border border-transparent">Order Now</a>
+                    <a href="#" class="bg-transparent text-white rounded-3xl py-3 px-8 font-medium border border-yellow-300 hover:bg-transparent hover:border-yellow-300 hover:text-white duration-300 flex items-center justify-center">
+                        Download Now
+                        <span class="text-lg inline-block rotate-90 ml-2">&#10148;</span>
+                    </a>
+                </div>
+            </div>
+            <div class="flex-1 flex justify-center md:justify-end mt-10 md:mt-0">
+                <img src="images/grocery-image.png" class="w-full max-w-md xl:w-auto" alt="Grocery">
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
